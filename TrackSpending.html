@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Track Your Spending</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:500" rel="stylesheet">
+    </head>
+
+    <body onresize="redraw()">
+        <div id="header">
+            <button id="back" onclick="back()">&#8592;</button>
+            <button class="right" id="logout" onclick="logout()">Log Out</button>
+        </div>
+        <div id="chart">
+            <!-- Right aligned menu below button class="mdl-button mdl-js-button mdl-button--icon" -->
+
+            <button id="demo-menu-lower-right1">Credit Card 1 &#9662;</button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right1">
+                <li class="mdl-menu__item" onclick="changeText1(this)">Credit Card 2</li>
+                <li class="mdl-menu__item" onclick="changeText1(this)">Debit Card 1</li>
+                <li class="mdl-menu__item" onclick="changeText1(this)">All Cards</li>
+            </ul>
+
+            <button id="demo-menu-lower-right">Last Month &#9662;</button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                <li class="mdl-menu__item" onclick="changeText(this)">Current Month</li>
+                <li class="mdl-menu__item" onclick="changeText(this)">Last Year</li>
+                <li class="mdl-menu__item" onclick="changeText(this)">Current Year</li>
+            </ul>
+
+        </div>
+        <div id="piechart"></div>
+        <div id="table">
+            <table id="data-table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th id=title scope="col">Categories</th>
+                        <th id=title scope="col">Current Month</th>
+                        <th id=title scope="col">Last Month</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id=SGrocery scope="row">Grocery</th>
+                        <th class="tooltip" id=SGrocery scope="row"> $0
+                            <span class="tooltiptext">
+					None
+					</span>
+                        </th>
+                        <th class="tooltip" id=SGrocery scope="row"> $240
+                            <span class="tooltiptext">
+					Jewels: $80
+					Whole Foods: $160
+					</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=SRest scope="row">Restaurants</th>
+                        <th class="tooltip" id=SRest scope="row"> $700
+                            <span class="tooltiptext">
+					Everest: $200
+					Moto: $500
+					</span>
+                        </th>
+                        <th class="tooltip" id=SRest scope="row"> $1,600
+                            <span class="tooltiptext">
+					Alinea: $1,000
+					Graham Elliot Bistro: $600
+					</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=SEnter scope="row">Entertainment</th>
+                        <th class="tooltip" id=SEnter scope="row"> $0
+                            <span class="tooltiptext">
+					None
+					</span>
+                        </th>
+                        <th class="tooltip" id=SEnter scope="row"> $7,000
+                            <span class="tooltiptext">
+					Cancun: $2,000
+					Paris: $5,000
+					</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=Sretail scope="row">Retail</th>
+                        <th class="tooltip" id=Sretail scope="row"> $19,500
+                            <span class="tooltiptext">Gucci: $4,500 
+					Prada: $5,000
+					Louis Vuitton: $10,000 
+					</span>
+                        </th>
+                        <th class="tooltip" id=Sretail scope="row"> $20,000
+                            <span class="tooltiptext">Chanel: $15,000 
+					Burberry: $5,000
+					</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=Srent scope="row">Rent</th>
+                        <th class="tooltip" id=Srent scope="row"> $850
+                            <span class="tooltiptext">Rent $800 
+					Water: $20
+					Electricity: $30
+					</span>
+                        </th>
+                        <th class="tooltip" id=Srent scope="row"> $840
+                            <span class="tooltiptext"> Rent $800 
+					Water: $20
+					Electricty: $20
+					</span>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>
+		</h1>
+            <button onclick="manual()">
+                Manual Transactions
+            </button>
+            <button class="right" onclick="newCard()">
+                Add New Card
+            </button>
+        </div>
+
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="spending.js"></script>
+    </body>
+
+</html>

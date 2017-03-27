@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+body {
+    background: #AAAAAA;
+}
+
+form {
+    position: relative;
+    margin: auto;
+    margin-top: 150px;
+    padding: 30px;
+    width: 600px;
+    background: rgba(255, 255, 255, 1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 30px 100px -40px #000;
+}
+
+formfield {
+    float: left;
+    width: 115%;
+}
+
+label {
+    float: left;
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #92A3A6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input,
+select,
+button {
+    float: left;
+    background: transparent;
+    border: 2px solid #EBEBEB;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0 10px 10px 0;
+    font-size: 1em;
+    line-height: 2em;
+    color: rgba(146, 163, 166, 1);
+    transition: border 300ms ease-in;
+}
+
+input:focus,
+select:focus {
+    border-color: #20A8FF;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(140, 160, 160, .5);
+}
+
+input[type="cancel"] {
+    float: left;
+    text-align: center;
+    margin-top: 33px;
+    position: absolute;
+    top: 75%;
+    width: 30%;
+    background: rgb(63, 81, 190);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 200ms ease-in;
+}
+
+input[type="cancel"]:hover {
+    background: rgb(63, 81, 190);
+    cursor: pointer;
+}
+
+input[type="confirm"] {
+    float: right;
+    text-align: center;
+    margin-top: 33px;
+    width: 30%;
+    background: rgb(63, 81, 190);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 200ms ease-in;
+}
+
+input[type="confirm"]:hover {
+    cursor: pointer;
+}
+
+#ccn input[type="text"] {
+    width: 20%;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+#ch input[type="text"] {
+    width: 41.8%;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+#expiration,
+#cvc {
+    width: 50%;
+}
+
+#cvc input[type="text"] {
+    width: 25%;
+}
+
+#expiration select {
+    background: #fff;
+    height: 46px;
+    width: 40%;
+    line-height: 1em;
+    text-align: center;
+}
+
+#cc {
+    width: 50%;
+}

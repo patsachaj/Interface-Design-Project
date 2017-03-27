@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Make A Budget</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:500" rel="stylesheet">
+        <script src="myscriptmbud.js"></script>
+    </head>
+
+    <body>
+        <button id=back onclick="back()"> &#8592; </button>
+        <div class="home">
+            <h2>Make A Budget</h2>
+            <form name="account name">
+                <div class="center">
+                    Entertainment <input class="mbud" type="text" id="box">
+                    <p class="tip">Tip: Last month you spent: $7,000</p>
+                    Retail <input class="mbud" type="text" id="box">
+                    <p class="tip">Tip: Last month you spent: $20,000</p>
+                    Grocery <input class="mbud" type="text" id="box">
+                    <p class="tip">Tip: Last month you spent: $240</p>
+                    Restaurants <input class="mbud" type="text" id="box">
+                    <p class="tip">Tip: Last month you spent: $1600</p>
+                    Rent <input class="mbud" type="text" id="box">
+                    <p class="tip">Tip: Last month you spent: $840</p>
+                </div>
+            </form>
+            <br>
+            <button id="Create" onclick="budget()"> Finish My Budget </button>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,279 @@
+/* General */
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+button:hover {
+    background-color: #91a3ff;
+    border-color: #91a3ff;
+}
+
+button {
+    background-color: rgb(63, 81, 181);
+    border-color: rgb(63, 81, 181);
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: .2em 0em;
+    cursor: pointer;
+}
+
+#back {
+    font-weight: bold;
+    width: 5em;
+    float: left;
+    margin-left: 85px;
+}
+
+#logout {
+    width: 5em;
+    float: right;
+    margin-right: 85px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/* Specific to budget.html and TrackSpending.html */
+#chart_div {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    align-content: center;
+    padding: 10pt;
+}
+
+#table,
+th,
+td {
+    border: 0px solid black;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+}
+
+.divider {
+    width: 270px;
+    height: auto;
+    display: inline-block;
+}
+
+#title {
+    background-color: #d8d3d0;
+    font-size: 20px;
+}
+
+#Grocery {
+    background-color: #F0F8FF;
+    font-size 14px;
+}
+
+#Rest {
+    background-color: #DCDCDC;
+    font-size 14px;
+}
+
+#Enter {
+    background-color: #F0F8FF;
+    font-size 14px;
+}
+
+#retail {
+    background-color: #DCDCDC;
+    font-size 14px;
+}
+
+#rent {
+    background-color: #F0F8FF;
+    font-size 14px;
+}
+
+th,
+td {
+    padding: 12px;
+}
+
+/* spending table */
+#SGrocery {
+    background-color: #5997f9;
+    color: 
+    font-size 14px;
+}
+
+#SRest {
+    background-color: #fcc2d7;
+    font-size 14px;
+}
+
+#SEnter {
+    background-color: #ffd3bc;
+    font-size 14px;
+}
+
+#Sretail {
+    background-color: #77ff7a;
+    font-size 14px;
+}
+
+#Srent {
+    background-color: #d2c2fc;
+    font-size 14px;
+}
+
+.tooltip {
+    position: relative;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    top: 70%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+button:active {
+    background-color: rgb(50, 60, 150);
+}
+
+#chart {
+    text-align: center;
+}
+
+#piechart {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    align-content: center;
+    padding: 10pt;
+}
+
+/* Specific to create.html and home.html */
+.home {
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    height: 30em;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: table;
+}
+
+span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* specific to home.html */
+.mainbuts {
+    padding-top: 5em;
+    width: 50%;
+    margin: auto;
+}
+
+.homeB {
+    color: white;
+    background-color: rgb(63, 81, 181);
+    font-weight: bold;
+    font-size: x-large;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+}
+
+.lowbuts {
+    width: 50%;
+    margin: auto;
+    padding-top: 3em;
+}
+
+/* Specific to login.html */
+#Login {
+    font-weight: bold;
+    width: 5em;
+}
+
+#Create {
+    font-weight: bold;
+}
+
+.login {
+    font-size: 16pt;
+    font-family: 'Lato', sans-serif;
+
+}
+
+/* Specific to mbud.html */
+.center {
+    font-family: 'Lato', sans-serif;
+    font-size: 14pt;
+    line-height: 100%;
+    width: 16em;
+    margin: auto;
+    text-align: left
+}
+
+.tip {
+    color: rgb(180, 180, 180);
+    font-size: 12pt;
+}
+
+.mbud {
+    float: right;
+}
+
+/* Specific to pro.html */
+.pro {
+    width: 20em;
+    margin: auto;
+    padding: 5em 0px 0px;
+    font-size: 16pt;
+}
+
+.cats {
+    text-align: left;
+    float: left;
+}
+
+.ans {
+    color: gray;
+    text-align: left;
+    float: right;
+}

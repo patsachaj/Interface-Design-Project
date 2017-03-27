@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Table (Forked)</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="manualstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:500" rel="stylesheet">
+</head>
+
+<body>
+  <div id="main">
+  <table id="data" class="data-table data-table-horizontal data-table-highlight">
+    <tbody>
+      <tr>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Cost</th>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder = "Category"/></td>
+        <td><input type="text" placeholder = "Description"/></td>
+        <td><input type="text" placeholder = "Cost"/></td>
+        <td><input type="button" value="x" onclick="deleteRow(this)"></input></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder = "Category"/></td>
+        <td><input type="text" placeholder = "Description"/></td>
+        <td><input type="text" placeholder = "Cost"/></td>
+        <td><input type="button" value="x" onclick="deleteRow(this)"></input></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder = "Category"/></td>
+        <td><input type="text" placeholder = "Description"/></td>
+        <td><input type="text" placeholder = "Cost"/></td>
+        <td><input type="button" value="x" onclick="deleteRow(this)"></input></td>
+      </tr>
+      <tr>
+      <td></td><td></td><td></td>
+      <td>        <div class="pull-right">
+    <input type="button" value="Add" class="top-buffer" onclick="addRow('data')" />
+  </div></td>
+      </tr>
+
+      <tfoot>
+        
+  <td><a href="TrackSpending.html"><button class="cancel">Cancel</button></a></td>
+  
+    <td><a href="TrackSpending.html"><button class = "submit">Submit</button></a></td>
+
+    <td>
+
+  </td>
+      </tfoot>
+  </table>
+
+</div>
+
+</body>
+
+   <script src="manualindex.js" async></script>
+</html>

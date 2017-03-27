@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>See My Budget</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:500" rel="stylesheet">
+    </head>
+
+    <body onresize="redraw()">
+        <div id="header">
+            <button id="back" onclick="back()">&#8592;</button>
+            <button id="logout" onclick="logout()">Log Out</button>
+        </div>
+        <div id="chart">
+            <!-- Right aligned menu below button class="mdl-button mdl-js-button mdl-button--icon" -->
+
+            <button id="demo-menu-lower-right">Last Month &#9662;</button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                <li class="mdl-menu__item" onclick="changeText(this)">Current Month</li>
+                <li class="mdl-menu__item" onclick="changeText(this)">Last Year</li>
+                <li class="mdl-menu__item" onclick="changeText(this)">Current Year</li>
+            </ul>
+
+        </div>
+        <div id="chart_div"></div>
+        <div id="table">
+            <table id="data-table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th id=title scope="col">Categories</th>
+                        <th id=title scope="col">Budget</th>
+                        <th id=title scope="col">Amount Spent</th>
+                        <th id=title scope="col">Advice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id=Grocery scope="row">Grocery</th>
+                        <th class="tooltip" id=Grocery scope="row"> $250
+                            <span class="tooltiptext">
+                                None
+                            </span>
+                        </th>
+                        <th class="tooltip" id=Grocery scope="row"> $240
+                            <span class="tooltiptext">
+                                Jewel: $80
+                                Whole Foods: $160
+                            </span>
+                        </th>
+                        <th class="tooltip" id=Grocery scope="row"> You're still within budget!
+                            <span class="tooltiptext">
+                                96% spent
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=Rest scope="row">Restaurants</th>
+                        <th class="tooltip" id=Rest scope="row"> $700
+                            <span class="tooltiptext">
+                                Everest: $200
+                                Moto: $500
+                            </span>
+                        </th>
+                        <th class="tooltip" id=Rest scope="row"> $1,600
+                            <span class="tooltiptext">
+                                Alinea: $1,000
+                                Graham Elliot Bistro: $600
+                            </span>
+                        </th>
+                        <th class="tooltip" id=Rest scope="row"> You're over your budget!
+                            <span class="tooltiptext">
+                                See the tips page for tips on saving and coupons!
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=Enter scope="row">Entertainment</th>
+                        <th class="tooltip" id=Enter scope="row"> $1,000
+                            <span class="tooltiptext">
+                                None
+                            </span>
+                        </th>
+                        <th class="tooltip" id=Enter scope="row"> $7,000
+                            <span class="tooltiptext">
+                                Cancun: $2,000
+                                Paris: $5,000
+                            </span>
+                        </th>
+                        <th class="tooltip" id=Enter scope="row"> You're over your budget!
+                            <span class="tooltiptext">
+                                See the tips page for tips on saving and coupons!
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=retail scope="row">Retail</th>
+                        <th class="tooltip" id=retail scope="row"> $1,000
+                            <span class="tooltiptext">Gucci: $450 
+                                Prada: $50
+                                Louis Vuitton: $500 
+                            </span>
+                        </th>
+                        <th class="tooltip" id=retail scope="row"> $20,000
+                            <span class="tooltiptext">
+                                Chanel: $15,000 
+                                Burberry: $5,000
+                            </span>
+                        </th>
+                        <th class="tooltip" id=retail scope="row"> You're over your budget!
+                            <span class="tooltiptext">
+                                See the tips page for tips on saving and coupons!
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th id=rent scope="row">Rent</th>
+                        <th class="tooltip" id=rent scope="row"> $840
+                            <span class="tooltiptext">
+                                Rent $800 
+                                Water: $20
+                                Electricity: $20
+                            </span>
+                        </th>
+                        <th class="tooltip" id=rent scope="row"> $840
+                            <span class="tooltiptext">
+                                Rent $800 
+                                Water: $20
+                                Electricty: $20
+                            </span>
+                        </th>
+                        <th class="tooltip" id=rent scope="row"> You've spent your budgeted amount.
+                            <span class="tooltiptext">
+                                100% spent <br>
+                                See the tips page for tips on saving and coupons!
+                            </span>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>
+		</h1>
+            <button onclick="manual()">
+                Edit Budget
+            </button>
+            <button class="right" onclick="newCard()">
+                Add New Category
+            </button>
+        </div>
+
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="budget.js"></script>
+    </body>
+
+</html>
